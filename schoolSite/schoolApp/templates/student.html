@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/schoolApp/student.css' %}">
+<script src="{% static 'js/schoolApp/student.js' %}"></script>
+
+<div class="center">
+    <div class="form-group">
+        <div class="form-group">
+            <label>Student Id</label>
+            <input type="number" class="form-control" id="Student" aria-describedby="emailHelp"
+                placeholder="Enter Student Id" required>
+        </div>
+    </div>
+    <button class="btn btn-primary" onclick="submit()">Submit</button>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="table table-responsive">
+        <!-- Table to view Feature Request Details -->
+        <table class="table table-bordered" id="Student_table" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>Report Id</th>
+                    <th>Student Id</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Year</th>
+                    <th>Science</th>
+                    <th>Maths</th>
+                    <th>Language</th>
+                    <th>Social</th>
+                    <th>Grade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+    {% endblock %}

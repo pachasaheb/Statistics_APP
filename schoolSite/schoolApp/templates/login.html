@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Statistics APP</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src=" {% static 'js/bootstrap.min.js' %} "></script>
+
+    <!-- datatables link -->
+    <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}">
+
+    <!-- loading login related css, js files -->
+    <link rel="stylesheet" href="{% static 'css/schoolApp/common.css' %}">
+    <script src="{% static 'js/schoolApp/login.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="form-group">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="login()">Submit</button>
+    </div>
+</body>
+
+</html>

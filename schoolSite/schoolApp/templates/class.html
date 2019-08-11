@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/schoolApp/class.css' %}">
+<script src="{% static 'js/schoolApp/class.js' %}"></script>
+
+<div class="center">
+    <form>
+        <div class="form-group">
+            <label>Select Class:</label>
+            <select class="form-control" id="class_dropdown">
+                <option value="0" selected="selected">--SELECT--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="table table-responsive">
+        <!-- Table to view Feature Request Details -->
+        <table class="table table-bordered" id="Class_table" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Total Students</th>
+                    <th>Passed Students</th>
+                    <th>Failed Students</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</div>
+
+{% endblock %}
